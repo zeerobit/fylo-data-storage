@@ -1,0 +1,36 @@
+// Primary color
+$Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+
+// Neutral colors
+$Pale_Blue: hsl(243, 100%, 93%);
+$Grayish_Blue: hsl(229, 7%, 55%);
+$Dark_Blue: hsl(228, 56%, 26%);
+$Very_Dark_Blue: hsl(229, 57%, 11%);
+
+$font-weights: (
+  "regular": 400,
+  "bold": 700,
+);
+
+// font-stack
+$font-family: Raleway, sans-serif;
+
+$font-size: 14px;
+
+// function for font-weight
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+// Flexbox
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+// media query
+@mixin breakpoint() {
+  @media only screen and (min-width: 61rem) {
+    @content;
+  }
+}

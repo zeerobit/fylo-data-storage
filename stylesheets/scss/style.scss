@@ -1,0 +1,191 @@
+@use "reset";
+@use "config";
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Karla:wght@400;700&family=Outfit:wght@300;400;600&family=Raleway:ital,wght@0,700;1,400&display=swap");
+
+body {
+  min-height: 100vh;
+  background: url(/images/bg-mobile.png) center/cover no-repeat;
+  color: config.$Pale_Blue;
+  font-family: config.$font-family;
+  display: grid;
+  place-content: center;
+  position: relative;
+
+  @include config.breakpoint() {
+    background: url(/images/bg-desktop.png) bottom/contain no-repeat;
+    background-color: config.$Very_Dark_Blue;
+  }
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+
+  @include config.breakpoint() {
+    @include config.flex(row);
+    max-width: 57rem;
+    gap: 1.8rem;
+  }
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+article {
+  border-radius: 0.5rem;
+}
+
+.storage__header {
+  border-top-right-radius: 6rem;
+  padding: 2rem;
+  background-color: config.$Dark_Blue;
+
+  @include config.breakpoint() {
+    padding: 2rem 8rem 2rem 2rem;
+  }
+
+  .storage__icons {
+    gap: 1rem;
+    display: flex;
+    margin-top: 2rem;
+
+    li {
+      padding: 0.6rem;
+      border-radius: 0.5rem;
+      background-color: config.$Very_Dark_Blue;
+      background-clip: padding-box;
+    }
+  }
+}
+
+.storage__data {
+  margin-top: 1rem;
+  background-color: config.$Dark_Blue;
+  padding: 3rem 2rem;
+  position: relative;
+
+  p {
+    font-size: 0.8rem;
+    text-align: center;
+    font-family: poppins, sans-serif;
+
+    @include config.breakpoint() {
+      text-align: start;
+      font-size: 0.9rem;
+    }
+
+    span {
+      font-weight: config.weight(bold);
+      font-family: config.$font-family;
+    }
+  }
+
+  @include config.breakpoint() {
+    width: 33rem;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+
+  .slider {
+    height: 1.25rem;
+    width: 100%;
+    border-radius: 0.6rem;
+    background-color: hsl(229, 57%, 18%);
+    margin-top: 1rem;
+    position: relative;
+
+    .gradient__slider {
+      height: 0.95rem;
+      width: 75%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translatey(-50%);
+      background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+      border-radius: 0.6rem;
+
+      .circle__slider {
+        width: 0.68rem;
+        height: 0.68rem;
+        background-color: config.$Pale_Blue;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0.1rem;
+        transform: translatey(-50%);
+      }
+    }
+  }
+
+  .storage__size {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+  }
+}
+
+.storage__left {
+  padding: 0.8rem 2rem;
+  font-size: 2rem;
+  background-color: config.$Pale_Blue;
+  color: config.$Very_Dark_Blue;
+  transform: translate(40%, 50%);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  @include config.breakpoint() {
+    transform: translate(42rem, -8rem);
+
+    &::after {
+      content: "";
+      clip-path: polygon(50% 0%, 0 49%, 51% 99%);
+      width: 3rem;
+      height: 3rem;
+      background-color: config.$Pale_Blue;
+      position: absolute;
+      top: 3rem;
+      right: -1.5rem;
+    }
+  }
+
+  span {
+    font-size: 0.7rem;
+    margin-left: 0.5rem;
+    text-transform: uppercase;
+    color: config.$Grayish_Blue;
+    transform: translateY(-0.5rem);
+    display: inline-block;
+  }
+}
+
+.attribution {
+  font-size: 0.68rem;
+  text-align: center;
+  margin-top: 5rem;
+
+  @include config.breakpoint {
+    font-size: 0.87rem;
+    margin-top: 0;
+  }
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}

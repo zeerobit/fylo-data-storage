@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <link rel="stylesheet" href="stylesheets/css/style.css" />
+
+    <title>Frontend Mentor | Fylo data storage component</title>
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="sr-only">Fylo data storage component</h1>
+      <article class="storage__header">
+        <img class="logo" src="./images/logo.svg" alt="fylo" />
+        <ul class="storage__icons">
+          <li><img src="./images/icon-document.svg" alt="" aria-hidden="true" /></li>
+          <li><img src="./images/icon-folder.svg" alt="" aria-hidden="true" /></li>
+          <li class="cloud"><img src="./images/icon-upload.svg" alt="" aria-hidden="true" /></li>
+        </ul>
+      </article>
+
+      <article class="storage__data">
+        <p>You’ve used <span>815 GB</span> of your storage</p>
+        <div class="slider">
+          <div class="gradient__slider"><span class="circle__slider"></span></div>
+        </div>
+
+        <ul class="storage__size">
+          <li>0 GB</li>
+          <li>1000 GB</li>
+        </ul>
+      </article>
+
+      <article class="storage__left">
+        <p>185<span>GB Left</span></p>
+      </article>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Zeerobit</a>.
+      </div>
+    </footer>
+  </body>
+</html>
