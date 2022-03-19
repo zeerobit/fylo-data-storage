@@ -11,6 +11,7 @@ body {
   display: grid;
   place-content: center;
   position: relative;
+  // padding: 8rem 1.5rem;
 
   @include config.breakpoint() {
     background: url(/images/bg-desktop.png) bottom/contain no-repeat;
@@ -142,17 +143,18 @@ article {
 }
 
 .storage__left {
-  padding: 0.8rem 2rem;
+  padding: 0.8rem 1rem;
   font-size: 2rem;
   background-color: config.$Pale_Blue;
   color: config.$Very_Dark_Blue;
-  transform: translate(40%, 50%);
+  transform: translate(50%, 50%);
   position: absolute;
   bottom: 0;
   left: 0;
 
   @include config.breakpoint() {
     transform: translate(42rem, -8rem);
+    padding: 0.8rem 2rem;
 
     &::after {
       content: "";
