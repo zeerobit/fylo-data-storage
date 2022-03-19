@@ -89,6 +89,7 @@ body {
   body {
     background: url(/images/bg-desktop.png) bottom/contain no-repeat;
     background-color: #0c122c;
+    background-attachment: fixed;
   }
 }
 
@@ -107,6 +108,7 @@ li {
     flex-direction: row;
     max-width: 57rem;
     gap: 1.8rem;
+    transform: translateY(-5rem);
   }
 }
 

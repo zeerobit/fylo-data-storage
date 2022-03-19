@@ -15,6 +15,7 @@ body {
   @include config.breakpoint() {
     background: url(/images/bg-desktop.png) bottom/contain no-repeat;
     background-color: config.$Very_Dark_Blue;
+    background-attachment: fixed;
   }
 }
 
@@ -31,6 +32,7 @@ li {
     @include config.flex(row);
     max-width: 57rem;
     gap: 1.8rem;
+    transform: translateY(-5rem);
   }
 }
 
