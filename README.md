@@ -36,7 +36,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://fylo-data-storage.pages.dev/
 
 ## My process
 
@@ -59,7 +59,6 @@ Users should be able to:
 
 - How to create a range slider from scratch without using input 
 
-To see how you can add code snippets, see below:
 
 ```html
  <div class="slider">

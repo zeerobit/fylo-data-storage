@@ -255,6 +255,9 @@ article {
   .attribution {
     font-size: 0.87rem;
     margin-top: 0;
+    position: absolute;
+    bottom: 1rem;
+    right: 5rem;
   }
 }
 
